@@ -4,7 +4,6 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
-import android.widget.Button
 import android.widget.EditText
 import android.widget.Toast
 import com.google.android.material.button.MaterialButton
@@ -15,7 +14,7 @@ class LoginActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_login)
 
-        getSupportActionBar()?.hide();
+        supportActionBar?.hide()
 
 //         check if there's a user logged in
 //         if there is, tke them to MainActivity
@@ -47,8 +46,9 @@ class LoginActivity : AppCompatActivity() {
         user.signUpInBackground { e ->
             if (e == null) {
                 // Hooray! User has successfully created a new account
+
                 // Navigate the user to the MainActivity
-                goToMainActivity()
+                goToMainActivity() // move to SetProfileActivity
                 // Show a toast to indicate user successfully signed up for an account
                 Toast.makeText(this, "Successfully created account", Toast.LENGTH_SHORT).show()
 
@@ -79,6 +79,12 @@ class LoginActivity : AppCompatActivity() {
         val intent = Intent(this@LoginActivity, MainActivity::class.java)
         startActivity(intent)
         // closes out the login activity. Back button exits the app.
+        finish()
+    }
+
+    private fun goToProfileSetup() {
+        val intent = Intent(this@LoginActivity, SetProfileActivity::class.java)
+        startActivity(intent)
         finish()
     }
 
