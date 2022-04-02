@@ -34,7 +34,7 @@ The following **additional** features are implemented:
 
 Here's a walkthrough of implemented user stories:
 
-<img src='https://github.com/yunijeong5/Instagram/blob/master/part_2.gif' title='Video Walkthrough' width='250' alt='Video Walkthrough' />
+<img src='https://github.com/yunijeong5/Instagram/blob/master/part_2.gif' title='Video Walkthrough' width='350' alt='Video Walkthrough' />
 
 
 ## Notes
